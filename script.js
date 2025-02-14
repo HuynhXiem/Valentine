@@ -55,7 +55,13 @@ document.addEventListener("DOMContentLoaded", function () {
     music.volume = 0.5;
     music.play().catch(() => console.log("Tự động phát nhạc bị chặn!"));
     musicBtn.addEventListener("click", function () {
-        music.paused ? music.play() : music.pause();
+        if (music.paused) {
+            music.play();
+            musicBtn.textContent = "🎶 Tắt Nhạc";
+        } else {
+            music.pause();
+            musicBtn.textContent = "🎶 Bật Nhạc";
+        }
     });
 
     // Khi nhấn vào hộp quà
