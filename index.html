@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Gift</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.2/dist/confetti.browser.min.js"></script>
+<body>
+    <!-- Màn hình loading -->
+    <div id="loading-screen">
+        <h1>Đang tải nè đợi xíu nhá ...</h1>
+        <div id="progress-bar">
+            <div id="progress"></div>
+        </div>
+        <h3 id="progress-text">0%</h3>
+    </div>
+
+    <!-- Popup câu hỏi -->
+    <div id="question-popup" class="hidden">
+        <div class="popup-content">
+            <h2>💖 Trước khi vào thì anh cần em trả lời câu hỏi này! 💖</h2>
+            <p>Anh biết mình chưa hiểu rõ nhau hết và cần thêm nhiều thời gian để khiến mọi việc trơn tru hơn,<br> 
+                anh cũng nhiều lần làm phật ý em và khiến em buồn, nhưng em cùng cố gắng với anh vì 2 đứa nha bé?</p>
+            <div class="oneline">
+            <label><input type="radio" name="valentine-question" value="a"> A: Yeah chắc chắn rồi</label><br>
+            <label><input type="radio" name="valentine-question" value="b"> B: Cũm cũm đi ha</label><br>
+            <label><input type="radio" name="valentine-question" value="c"> C: Bb3 thì suy nghĩ</label><br>
+            <label><input type="radio" name="valentine-question" value="d"> D: Ai biết đâu, anh nhường em thì okay :>> </label><br>
+
+            <button id="show-extra-answer" class="hidden-button">Thêm đáp án E nè nếu em chưa ưng</button>
+            <label id="extra-answer" class="hidden">
+                <input type="radio" name="valentine-question" value="e">E: Nói chứ cái nào cũng phải là yes hết cho anh :3
+            </label>
+            <br>
+            </div>
+
+            <button id="submit-question">Trả lời</button>
+        </div>
+    </div>
+
+    <!-- Nội dung chính -->
+    <div id="main-content" class="hidden">
+        <audio id="bg-music" loop>
+            <source src="Em Ellata - Đoạn kết (Happy Ending) (Audio).mp3" type="audio/mp3">
+        </audio>
+        
+        <div class="container">
+            <h1>💖 Chúc mừng Valentine, cục mỡ! 💖</h1>
+            <button id="music-btn">🎶 Bật/Tắt Nhạc Nè Bé</button>
+            
+            <div id="gift-box" class="gift-box">
+                🎁
+            </div>
+
+            <div id="question-box" class="hidden">
+                <p><b>Thêm một câu hỏi nữa nhé:</b> Ngày chính thức thành đôi của hai đứa là?</p>
+                <input type="text" id="answer" placeholder="Nhập câu trả lời...">
+                <button id="submit-answer">Gửi câu trả lời đầy iu thưn</button>
+            </div>
+
+            <div id="message-box" class="hidden">
+                <h1>🎉 Tuỵt dời! 🎉</h1>
+                <h2>Em là điều đẹp đẽ trong cuộc đời anh 🥰 Anh yêu em nhiều lắm! 💖<h2>
+                <img src="anh1.jpg" alt="Love" width="400">
+                <img src="anh2.jpg" alt="Love" width="400">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
